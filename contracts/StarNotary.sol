@@ -11,20 +11,20 @@ contract StarNotary is ERC721 {
     struct Star {
         string name;
     }
-    string _name;
-    string _symbol;
+    string name;
+    string symbol;
 
 
     // Implement Task 1 Add a name and symbol properties
     // name: Is a short name to your token
     // symbol: Is a short string like 'USD' -> 'American Dollar'
     constructor() public ERC721 () {
-        _name = 'StarNotaryToken';
-        _symbol = "SNT";
+        name = 'StarNotaryToken';
+        symbol = "SNT";
     }
 
-    function getName() public returns (string memory) {return _name;}
-    function getSymbol() public returns (string memory) {return _symbol;}
+    function getName() public returns (string memory) {return name;}
+    function getSymbol() public returns (string memory) {return symbol;}
 
     // mapping the Star with the Owner Address
     mapping(uint256 => Star) public tokenIdToStarInfo;
